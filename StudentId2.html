@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student ID </title>
+    <link rel="stylesheet" href="StudentID2.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a class="photo-card" href="#">Photo Card</a> </li>
+            </ul>
+            <ul>
+               
+                <li><a href="#">Receipt</a></li>
+                <li><a href="#">Registration</a></li>
+                <li><a href="#">Certificate</a></li>
+            </ul>
+        </nav>
+        <img src="./icons8_home_32px.png" alt="Home icon">
+    </header>
+    <main>
+        <div class="container">
+            <!-- ADDRESS AND IMG ICON -->
+            <div class="first-section">
+                <p>Block 15b, Rabiatu Thompson Crescent, Masha Road, Surulere, Lagos.</p>
+
+                <div class="png-icon" >
+                    <div class="para">
+                        <p >PNG & JPG only </p>
+                    </div>
+                    <div class="icon-upload">
+                        <img src="./icons8_person_64px.png" alt="person icon" id="photo">
+                    <div id="upload1">
+                        <input type="file" id="file">
+                    <label for="file" id="upload">UPLOAD IMAGE</label>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <!-- SECOND SECTION -->
+            <form>
+                <div class="studentid">
+                    <input type="text" placeholder="student ID">
+                </div>
+                <div class="names">
+                    <input type="text" placeholder="first name" class="first">
+                    <input type="text" placeholder="last name" class="last">
+                </div>
+                <div class="thirdline">
+                    <div class="course">
+                        <input type="text" placeholder="course title" class="student-course">
+                    </div>
+                    <div class="dates">
+                        <input type="text" placeholder="start">
+                        <input type="text" placeholder="end">
+                    </div>
+                </div>
+                <div class="last-line">
+                    <div class="student-signature">
+                      <input type="text">
+                        <p>Upload Student Signature</p>
+                    </div>
+
+                    <img src="./qr-code-file-bangla-mobile-code-0.png" alt="Qr code">
+                    
+                    <div class="registrar-signature">
+                        <input type="text">
+                        <p>Upload Student Signature</p>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="generate">
+            <button class="btn_generate">Generate ID card</button>
+        </div>
+
+
+   <div class="big-container">
+    <div class="second-container">
+        <div class="close">
+            <img src="./icons8_close_window_48px_1.png" alt="" id="close">
+        </div>
+        <div class="section1">
+           
+            <img src="" alt="" id="photo2">
+            <h1 id="cardname">Igwe Charles</h1>
+            <h3 id="student_course">Web Development</h3>
+        </div>
+
+        <div class="section2">
+            <img src="./icons8_mortarboard_30px_1.png" alt="">
+            <h2>CODEPROF ACADEMY</h2>
+            <h4>+2348097350962</h4>
+            <p>www.codeprof.net</p>
+            <h5>signature</h5>
+        </div>
+       
+    </div>
+    <div class="buttons">
+        <button>Print</button>
+        <button>Save</button>
+        <button>Share</button>
+    </div>
+   </div>
+        
+    </main>
+    <footer>
+        Designed & Powered by Codeprof Academy
+    </footer>
+
+  <script>
+    var profileContainer = document.querySelector('.icon-upload')
+    var photo = document.getElementById('photo')
+   
+    var upload_btn = document.getElementById('upload1')
+    var input_file = document.getElementById('file')
+    var display = document.querySelector('.big-container')
+     var photo = document.getElementById('photo')
+     var photo2 = document.getElementById('photo2')
+     var close  = document.getElementById('close')
+     var generate = document.querySelector('.generate')
+    
+
+
+    profileContainer.addEventListener('mouseenter', ()=>{
+        upload_btn.style.display = "flex"
+    })
+    profileContainer.addEventListener('mouseleave', ()=>{
+        upload_btn.style.display = "none"
+    })
+
+    // WORKING ON THE CHOSEN FILE
+    input_file.addEventListener('change', ()=>{
+            var chosenFile = input_file.files[0]
+            var reader = new FileReader();
+            reader.addEventListener('load', ()=>{
+                if(chosenFile){
+                    photo2.setAttribute('src', reader.result)
+                    photo.setAttribute('src', reader.result)
+                }
+            })
+            reader.readAsDataURL(chosenFile)
+            
+            generate.style.display = "flex"
+            display_names()
+
+
+        })
+
+        document.querySelector('.btn_generate').addEventListener('click', ()=>{
+            display.style.display = "flex"
+            generate.style.display = "none"
+        })
+        
+        document.getElementById('close').addEventListener('click', ()=>{
+            display.style.display = "none"
+        })
+
+        function get_names(){
+        var first = document.querySelector('.first').value
+        var last = document.querySelector('.last').value
+        var course = document.querySelector('.student-course').value
+            
+        return[first,last,course]
+        }
+        function display_names(){
+            var namess = get_names()
+            document.getElementById('cardname').innerHTML = namess[0] + " " +namess[1]
+            document.getElementById('student_course').innerHTML = namess[2]
+        }
+        
+        
+        
+
+
+
+
+    
+  </script>
+</body>
+</html>

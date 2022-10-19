@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uploading Image</title> 
+    <link rel="icon" href="./icons8_home_16px.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="profile-container">
+        <img src="student.png" alt="profile image" id="photo">
+        <input type="file" id="file">
+        <label for="file" id="upload"> <img src="./icons8_camera_30px.png" alt="camera icon" width="30"></label>
+    </div>
+    
+    <script>
+        var profileContainer = document.querySelector('.profile-container')
+        var photo = document.getElementById('photo')
+        var upload_btn = document.getElementById('upload')
+        var input_file = document.getElementById('file')
+
+        profileContainer.addEventListener('mouseenter', ()=>{
+            upload_btn.style.display = "flex"
+        })
+        profileContainer.addEventListener('mouseleave', ()=>{
+            upload_btn.style.display = "none"
+        })
+
+        // WORKING ON THE CHOSEN FILE
+
+
+        input_file.addEventListener('change', ()=>{
+            var chosenFile = input_file.files[0]
+            var reader = new FileReader();
+            reader.addEventListener('load', ()=>{
+                if(chosenFile){
+                    photo.setAttribute('src', reader.result)
+                }
+            })
+            reader.readAsDataURL(chosenFile)
+        })
+
+    </script>
+</body>
+</html>

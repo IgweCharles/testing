@@ -1,0 +1,368 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(7, 135, 135);
+   
+
+}
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+   
+}
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 0 40px;
+    margin: 0;
+}
+header nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header nav ul{
+    display: flex;
+    gap: 0 25px;
+}
+header nav ul li{
+    list-style: none;
+    display: flex;
+}
+header nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+.container{
+    width: 85%;
+    background-color: white;
+    margin: 30px;
+    padding: 20px 0;
+}
+
+.container input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-bottom: 1px solid rgb(7, 135, 135);
+}
+.first-section{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+   
+    padding: 0 30px;
+}
+.first-section p{
+    width: 20%;
+    background-color: rgb(215, 210, 210);
+    margin: 20px;
+    padding: 5px;
+}
+.png-icon{
+    width: 25%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+}
+.png-icon p{
+    width: 100%;
+    color: rgb(11, 160, 160);
+    background-color: white;
+    border: 1px solid silver;
+    border-radius: 10px;
+    font-size: 12px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 40px;
+    padding:0 5px;
+}
+.para{
+    width: 100%;
+ 
+    position: relative;
+    top: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.para p{
+    width: 100%;
+}
+.icon-upload{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    right: 0;
+}
+.icon-upload img{
+    background-color: rgb(215, 210, 210);
+   
+}
+
+form{
+    width: 100%;
+    padding: 10px 30px;
+}
+form input{
+    width: 43%;
+    padding: 15px;
+}
+
+.names{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.thirdline{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.course{
+    width: 60%;
+}
+.course input{
+    width: 75%;
+}
+.dates{
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.dates input{
+    width: 45%;
+}
+.last-line{
+    display: flex;
+    justify-content: flex-start;
+    align-items:flex-end;
+    gap: 0 25%;
+}
+
+.last-line input{
+    background-color: rgb(215, 210, 210);
+    width: 120%;
+    margin-top : 20px;
+    margin-bottom : 15px;
+    padding: 20px;
+    border: none;
+}
+.last-line p{
+    border-top: 1px solid rgb(7, 135, 135);
+    padding: 10px;
+    color: #333;
+    width: 120%;
+}
+.last-line img{
+    width: 8%;
+}
+
+.registrar-signature{
+    margin-right: 20px;
+}
+.photo-card{
+    background-color: rgb(7, 135, 135);
+    padding:10px 10px;
+    margin-right: 13px;
+}
+
+footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+#upload1 input{
+    display: none;
+}
+.icon-upload img{
+
+    width: 130px;
+}
+#upload1{
+    width: 110%;
+    display: none;
+    
+}
+#upload1 label{
+    background-color: orangered;
+    color: white;
+    margin-left: 25px;
+    width: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 15px;
+ 
+}
+#upload1 label:hover{
+    background-color: silver;
+    color: orangered;
+
+}
+
+.big-container{
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+
+}
+.second-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    background-color: white;
+
+}
+.section1{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
+   
+}
+.section1 img{
+    width: 200px;
+    height: 200px;
+    border: 2px solid purple;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+.section1 h1{
+    font-size: 30px;
+}
+.section1 h3{
+    font-size: 15px;
+    color: purple;
+}
+
+.section2{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: purple;
+    padding: 10px 20px;
+}
+
+.section2 img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    margin-bottom: 10px;
+}
+.section2 h2{
+    font-size: 20px;
+    color: white;
+    margin-bottom: 3px;
+}
+.section2 h4{
+    font-size: 15px;
+    color: orange;
+    margin-bottom: 3px;
+}
+.section2 p{
+    color: white;
+    margin-bottom: 40px;
+}
+.section2 h5{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 30%;
+    border-top: 1px solid white;
+    color: white;
+}
+
+.buttons{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    gap: 0 20px;
+    padding: 10px;
+    
+}
+.buttons button{
+    border: none;
+    background-color: silver;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+.buttons button:hover{
+    transform: scale(0.9);
+}
+.close{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    background-color: black;
+    padding-top: 30px;
+}
+.close img{
+    width: 30px;
+    height: 30px;
+    border: none;
+}
+.close img:hover{
+    transform: scale(1.2);
+}
+
+.generate{
+    width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+.generate button{
+    padding: 5px;
+    background-color: black;
+    cursor: pointer;
+    border: 1px solid black;
+    color: white;
+}
+.generate button:hover{
+    color: black;
+    background-color: white;
+}
